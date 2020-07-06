@@ -1,5 +1,5 @@
 import { Component, Injectable } from '@angular/core';
-
+import {WriteService } from './write.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,17 +13,5 @@ export class AppComponent {
 
   consoleLog(): void {
     console.log(this.service.write());
-  }
-}
-
-
-@Injectable({
-  providedIn: 'root'
-})
-export class WriteService {
-  constructor() { }
-
-  public write(): string{
-    return 'hello ang 10';
   }
 }
