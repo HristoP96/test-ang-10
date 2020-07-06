@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "ng serve"
+    "start": "node --max_old_space_size=12192 node_modules/@angular/cli/bin/ng serve"
   },
   "dependencies": {
     "@angular/animations": "^10.0.0",
