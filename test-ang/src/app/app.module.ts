@@ -3,19 +3,24 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
-import { 
-	IgxButtonModule,
-	IgxCheckboxModule,
-	IgxDatePickerModule,
-	IgxDialogModule,
-	IgxGridModule,
-	IgxInputGroupModule,
-	IgxIconModule,
-	IgxComboModule,
-	IgxRippleModule
- } from "igniteui-angular";
-import { GridEditingSampleComponent } from "./grid/grid-editing-sample/grid-editing-sample.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
+import { HttpClientModule } from "@angular/common/http";
+import { 
+	IgxAvatarModule,
+	IgxBadgeModule,
+	IgxButtonModule,
+	IgxGridModule,
+	IgxIconModule,
+	IgxInputGroupModule,
+	IgxProgressBarModule,
+	IgxRippleModule,
+	IgxSwitchModule
+ } from "igniteui-angular";
+import { GridComponent } from "./grid/grid-boston-marathon/grid.component";
+import { 
+	IgxSparklineCoreModule,
+	IgxSparklineModule
+ } from "igniteui-angular-charts";
 
 
 
@@ -23,22 +28,25 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
   bootstrap: [AppComponent],
   declarations: [
     AppComponent,
-		GridEditingSampleComponent
+		GridComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
 		IgxPreventDocumentScrollModule,
+		IgxAvatarModule,
+		IgxBadgeModule,
 		IgxButtonModule,
-		IgxCheckboxModule,
-		IgxDatePickerModule,
-		IgxDialogModule,
 		IgxGridModule,
-		IgxInputGroupModule,
 		IgxIconModule,
+		IgxInputGroupModule,
+		IgxProgressBarModule,
 		IgxRippleModule,
-		IgxComboModule
+		IgxSwitchModule,
+		HttpClientModule,
+		IgxSparklineCoreModule,
+		IgxSparklineModule
   ],
   providers: [],
   entryComponents: [],
