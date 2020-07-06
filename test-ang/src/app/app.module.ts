@@ -1,16 +1,47 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { AppComponent } from "./app.component";
+import { 
+	IgxButtonModule,
+	IgxCheckboxModule,
+	IgxDatePickerModule,
+	IgxDialogModule,
+	IgxGridModule,
+	IgxInputGroupModule,
+	IgxIconModule,
+	IgxComboModule,
+	IgxRippleModule
+ } from "igniteui-angular";
+import { GridEditingSampleComponent } from "./grid/grid-editing-sample/grid-editing-sample.component";
+import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
-import { AppComponent } from './app.component';
+
 
 @NgModule({
+  bootstrap: [AppComponent],
   declarations: [
-    AppComponent
+    AppComponent,
+		GridEditingSampleComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+		IgxPreventDocumentScrollModule,
+		IgxButtonModule,
+		IgxCheckboxModule,
+		IgxDatePickerModule,
+		IgxDialogModule,
+		IgxGridModule,
+		IgxInputGroupModule,
+		IgxIconModule,
+		IgxRippleModule,
+		IgxComboModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  entryComponents: [],
+  schemas: []
 })
-export class AppModule { }
+export class AppModule {}
